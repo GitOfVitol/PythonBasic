@@ -3,4 +3,3 @@ b=float(input("Enter the second value : "))
 result=a+b
 
 print("Result is %6.2f" %result)
-print("Hello World!")
