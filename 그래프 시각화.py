@@ -31,6 +31,7 @@ class Calculator:
         self.entry_value.insert(0, read_value)
         f.close()
 
+    # python 람다함수 설명 https://blog.naver.com/diana_seoul/222021979841
     def __init__(self, main):
         main.title("Calculator")
         main.geometry()
@@ -92,6 +93,7 @@ class ScienceCalculator(Calculator):
         Button(main, text="√", width=10, command=lambda :self.get_sqrt()).grid(row=5, column=0)
         Button(main, text="x²", width=10, command=lambda: self.get_pow()).grid(row=5, column=1)
 
+#matplotlib add_subplot 설명 https://blog.naver.com/jung2381187/220410035434
 class GraphCalculator(ScienceCalculator):
     x=[]
     y=[]
@@ -108,6 +110,7 @@ class GraphCalculator(ScienceCalculator):
         self.canvas=FigureCanvasTkAgg(self.fig, main)
         self.canvas.get_tk_widget().grid(row=6, column=0, columnspan=4)
 
+    #linspace 설명 https://antilibrary.org/2482
     def get_pow(self):
         super().get_pow()
         for t in np.linspace(0, 100, 100):
